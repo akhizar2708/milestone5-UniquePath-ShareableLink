@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Dynamic Resume Builder</h1>
+        <form id="resume-form">
+            <!-- Personal Info Section -->
+            <section class="personal-info">
+                <h2>Personal Information</h2>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="profilePicture">Profile Picture</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education">
+                <h2>Education</h2>
+                <label for="education">Education:</label>
+                <textarea id="education" name="education" required></textarea>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="skills">
+                <h2>Skills</h2>
+                <label for="skills">Skills (comma-separated):</label>
+                <input type="text" id="skills" name="skills" required>
+            </section>
+
+            <!-- Work Experience Section -->
+            <section class="work-experience">
+                <h2>Work Experience</h2>
+                <label for="workExperience">Work Experience (comma-separated):</label>
+                <textarea id="workExperience" name="workExperience" required></textarea>
+            </section>
+
+            <!-- Generate Resume Button -->
+            <button type="submit" id="generate-resume-btn">Generate Resume</button>
+        </form>
+    </div>
+
+    <!-- Resume Output Container -->
+    <div class="resume-container">
+        <h2>Generated Resume</h2>
+        <div id="resumeoutput">
+            <p id="placeholder">Generated Resume Content Will Show Here</p> <!-- Placeholder Text -->
+        </div>
+        <button id="print-pdf-btn" style="display:none;">Print PDF</button> <!-- Print PDF Button -->
+        <button id="share-resume-btn" style="display:none;">Share Resume</button> <!-- Share Resume Button -->
+        <button id="edit-resume-btn" style="display:none;">Edit Resume</button> <!-- Edit Button -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
